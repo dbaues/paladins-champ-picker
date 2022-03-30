@@ -1,0 +1,17 @@
+version: "2.0"
+
+networks:
+  default:
+    external:
+      name:
+        # FIXME: look into adding network
+
+services:
+  paladins-champ-picker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/code:rw
+    ports:
+      - 5050:5000
